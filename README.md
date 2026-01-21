@@ -1,145 +1,198 @@
-🚗 Odoo CarRental — Gestión de Reservas
+<h1 align="center">🚗 Odoo CarRental — Gestión de Reservas</h1>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Odoo-17.0-purple" />
+  <img src="https://img.shields.io/badge/Python-3.10+-blue" />
+  <img src="https://img.shields.io/badge/Docker-Enabled-2496ED" />
+  <img src="https://img.shields.io/badge/Estado-En%20Desarrollo-orange" />
+</p>
 
+<p align="center">
+  <b>Proyecto Académico — DAM 2B | Sistemas de Gestión Empresarial (UT5)</b><br>
+  Módulo personalizado para Odoo 17 orientado a la gestión integral de una empresa de alquiler de vehículos.
+</p>
 
+<hr>
 
+<h2>📖 Descripción</h2>
 
+<p>
+El módulo <code>gestion_reservas</code> amplía Odoo 17 para cubrir todo el ciclo del alquiler de coches,
+simulando un entorno real de empresa y aplicando metodología SCRUM.
+</p>
 
+<ul>
+  <li>Gestión de servicios (flota)</li>
+  <li>Reservas con validaciones</li>
+  <li>Clientes VIP con descuento automático</li>
+  <li>Facturación automática</li>
+  <li>Control de accesos por usuario</li>
+</ul>
 
+<hr>
 
-📚 Proyecto Académico — Sistemas de Gestión Empresarial (DAM 2B)
-Desarrollo de un módulo personalizado para Odoo 17 orientado a la gestión integral de una empresa de alquiler de vehículos.
+<h2>✨ Funcionalidades</h2>
 
-📌 Descripción
+<h3>🚘 Servicios (<code>res.service</code>)</h3>
+<ul>
+  <li>Alta, baja y edición de vehículos</li>
+  <li>Precio por día configurable</li>
+  <li>Activar / desactivar disponibilidad (<code>active</code>)</li>
+</ul>
 
-El módulo gestion_reservas amplía Odoo 17 para cubrir todo el ciclo de alquiler de coches:
+<h3>📅 Reservas (<code>res.booking</code>)</h3>
+<ul>
+  <li>❌ No permite fechas pasadas</li>
+  <li>✅ Verifica disponibilidad del servicio</li>
+  <li>💶 Precio automático por duración</li>
+  <li>⭐ Descuento VIP del <b>10%</b></li>
+  <li>⏱ Cancelación automática tras 24h</li>
+</ul>
 
-Gestión de flota
+<h3>💰 Facturación</h3>
+<ul>
+  <li>Factura automática al confirmar reserva</li>
+  <li>Integración con módulo <code>account</code></li>
+</ul>
 
-Reservas con validaciones
+<h3>🔐 Seguridad</h3>
+<ul>
+  <li>Clientes → solo ven sus reservas</li>
+  <li>Admins → acceso completo</li>
+</ul>
 
-Descuentos VIP
+<hr>
 
-Facturación automática
+<h2>🖼 Capturas del Sistema</h2>
 
-Control de accesos por usuario
+<p align="center">
+  <img src="docs/img/servicios.png" width="45%" />
+  <img src="docs/img/reservas.png" width="45%" /><br><br>
+  <img src="docs/img/form_reserva.png" width="45%" />
+  <img src="docs/img/factura.png" width="45%" />
+</p>
 
-Pensado para simular un entorno real de empresa usando buenas prácticas de desarrollo en Odoo.
+<p align="center">
+  <i>Interfaz de servicios, reservas, formulario y facturación automática</i>
+</p>
 
-✨ Funcionalidades
-🚘 Gestión de Flota (res.service)
+<hr>
 
-Alta, baja y edición de vehículos
+<h2>📂 Estructura del Módulo</h2>
 
-Precio por día configurable
-
-Control de disponibilidad mediante campo active
-
-📅 Reservas (res.booking)
-
-❌ No permite fechas pasadas
-
-✅ Verifica disponibilidad del vehículo
-
-💶 Cálculo automático del precio según duración
-
-⭐ Descuento automático del 10% para clientes VIP
-
-⏱ Cancelación automática de reservas no confirmadas en 24h
-
-💰 Facturación
-
-Generación automática de factura al confirmar la reserva
-
-Integración con módulo account de Odoo
-
-🔐 Seguridad
-
-👤 Clientes: solo ven sus propias reservas
-
-👨‍💼 Administradores: acceso completo a flota, clientes y reservas
-
-📂 Estructura del Módulo
+<pre>
 gestion_reservas/
 ├── models/
-│   ├── models.py        # Lógica de negocio (servicios, clientes, reservas)
+│   ├── models.py
 │   └── __init__.py
 ├── views/
-│   └── views.xml        # Menús, formularios y listas
+│   └── views.xml
 ├── security/
 │   └── ir.model.access.csv
-├── __manifest__.py      # Dependencias y metadata
+├── __manifest__.py
 └── README.md
+</pre>
 
-🚀 Instalación
-✅ Requisitos
+<hr>
 
-Docker
+<h2>🚀 Instalación</h2>
 
-Docker Compose
+<h3>Requisitos</h3>
+<ul>
+  <li>Docker</li>
+  <li>Docker Compose</li>
+  <li>Odoo 17</li>
+</ul>
 
-Odoo 17
+<h3>Despliegue</h3>
 
-🐳 Despliegue con Docker
-docker-compose up -d
+<pre>docker-compose up -d</pre>
 
+<p>Acceso: <a href="http://localhost:8069">http://localhost:8069</a></p>
 
-Servicios:
+<h3>Instalar módulo</h3>
 
-Odoo → http://localhost:8069
+<ol>
+  <li>Activar Modo Desarrollador</li>
+  <li>Apps → Actualizar lista</li>
+  <li>Instalar <b>Gestión Alquiler de Coches</b></li>
+</ol>
 
-Postgres → puerto interno Docker
+<hr>
 
-⚙️ Instalación del módulo
+<h2>🧠 Metodología SCRUM</h2>
 
-Accede a http://localhost:8069
+<table>
+  <tr>
+    <th>Sprint</th>
+    <th>Objetivo</th>
+    <th>Progreso</th>
+  </tr>
+  <tr>
+    <td>Sprint 1</td>
+    <td>Modelos y relaciones</td>
+    <td>██████████ 100%</td>
+  </tr>
+  <tr>
+    <td>Sprint 2</td>
+    <td>Lógica y validaciones</td>
+    <td>███████░░░ 70%</td>
+  </tr>
+  <tr>
+    <td>Sprint 3</td>
+    <td>Vistas y seguridad</td>
+    <td>██░░░░░░░░ 20%</td>
+  </tr>
+  <tr>
+    <td>Sprint 4</td>
+    <td>Pruebas y presentación</td>
+    <td>░░░░░░░░░░ 0%</td>
+  </tr>
+</table>
 
-Activa Modo Desarrollador
+<hr>
 
-Apps → Actualizar lista de aplicaciones
+<h2>🌿 Flujo de Git</h2>
 
-Instala Gestión Alquiler de Coches
+<ul>
+  <li><b>main</b> → estable</li>
+  <li><b>develop</b> → integración</li>
+  <li><b>feature/*</b> → trabajo individual</li>
+</ul>
 
-🧠 Metodología de Trabajo
-
-Proyecto organizado usando SCRUM:
-
-Sprint	Objetivo	Estado
-1	Modelos y relaciones	✅
-2	Lógica de negocio y validaciones	🚧
-3	Vistas y seguridad	⏳
-4	Pruebas y presentación final	⏳
-
-Roles rotativos:
-
-Scrum Master
-
-Product Owner
-
-Dev Team
-
-🌿 Flujo de Git
-
-Ramas:
-
-main → versión estable
-
-develop → integración del equipo
-
-feature/* → trabajo individual
-
-Flujo:
-
+<pre>
 feature → Pull Request → develop → Pull Request → main
+</pre>
 
+<p>✔ Ramas protegidas</p>
 
-⚠️ main y develop están protegidas (no se permite push directo).
+<hr>
 
-👥 Equipo
+<h2>👥 Equipo (4 personas)</h2>
 
-Proyecto desarrollado por estudiantes de DAM
-Asignatura: Sistemas de Gestión Empresarial
+<ul>
+  <li>👨‍💻 Nombre 1 — Backend / Product Owner</li>
+  <li>🎨 Nombre 2 — Frontend</li>
+  <li>🧩 Nombre 3 — Backend</li>
+  <li>🧑‍✈️ Nombre 4 — Scrum Master</li>
+</ul>
 
-📄 Licencia
+<p><i>Roles rotativos en cada sprint.</i></p>
 
-Uso académico y educativo.
+<hr>
+
+<h2>📦 Entregables UT5</h2>
+
+<ul>
+  <li>Repositorio Git con historial</li>
+  <li>Tablero SCRUM (GitHub Projects)</li>
+  <li>Dashboard WakaTime</li>
+  <li>Documento de errores y soluciones</li>
+  <li>Presentación final</li>
+</ul>
+
+<hr>
+
+<p align="center">
+  <b>CFGM DAM 2B — Sistemas de Gestión Empresarial</b>
+</p>

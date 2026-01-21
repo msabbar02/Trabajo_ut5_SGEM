@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="drive-go.list">
+      <field name="name">drive-go list</field>
+      <field name="model">drive-go.drive-go</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="drive-go.action_window">
+      <field name="name">drive-go window</field>
+      <field name="res_model">drive-go.drive-go</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="drive-go.action_server">
+      <field name="name">drive-go server</field>
+      <field name="model_id" ref="model_drive-go_drive-go"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="drive-go" id="drive-go.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="drive-go.menu_1" parent="drive-go.menu_root"/>
+    <menuitem name="Menu 2" id="drive-go.menu_2" parent="drive-go.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="drive-go.menu_1_list" parent="drive-go.menu_1"
+              action="drive-go.action_window"/>
+    <menuitem name="Server to list" id="drive-go" parent="drive-go.menu_2"
+              action="drive-go.action_server"/>
+-->
+  </data>
+</odoo>

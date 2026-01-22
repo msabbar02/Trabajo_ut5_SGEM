@@ -63,21 +63,6 @@ simulando un entorno real de empresa y aplicando metodología SCRUM.
 
 <hr>
 
-<h2>🖼 Capturas del Sistema</h2>
-
-<p align="center">
-  <img src="docs/img/servicios.png" width="45%" />
-  <img src="docs/img/reservas.png" width="45%" /><br><br>
-  <img src="docs/img/form_reserva.png" width="45%" />
-  <img src="docs/img/factura.png" width="45%" />
-</p>
-
-<p align="center">
-  <i>Interfaz de servicios, reservas, formulario y facturación automática</i>
-</p>
-
-<hr>
-
 <h2>📂 Estructura del Módulo</h2>
 
 <pre>
@@ -117,39 +102,6 @@ gestion_reservas/
   <li>Apps → Actualizar lista</li>
   <li>Instalar <b>Gestión Alquiler de Coches</b></li>
 </ol>
-
-<hr>
-
-<h2>🧠 Metodología SCRUM</h2>
-
-<table>
-  <tr>
-    <th>Sprint</th>
-    <th>Objetivo</th>
-    <th>Progreso</th>
-  </tr>
-  <tr>
-    <td>Sprint 1</td>
-    <td>Modelos y relaciones</td>
-    <td>██████████ 100%</td>
-  </tr>
-  <tr>
-    <td>Sprint 2</td>
-    <td>Lógica y validaciones</td>
-    <td>███████░░░ 70%</td>
-  </tr>
-  <tr>
-    <td>Sprint 3</td>
-    <td>Vistas y seguridad</td>
-    <td>██░░░░░░░░ 20%</td>
-  </tr>
-  <tr>
-    <td>Sprint 4</td>
-    <td>Pruebas y presentación</td>
-    <td>░░░░░░░░░░ 0%</td>
-  </tr>
-</table>
-
 <hr>
 
 <h2>🌿 Flujo de Git</h2>
@@ -171,7 +123,7 @@ feature → Pull Request → develop → Pull Request → main
 <h2>👥 Equipo (4 personas)</h2>
 
 <ul>
-  <li>👨‍💻 Nombre 1 — Backend / Product Owner</li>
+  <li>👨‍💻 Mohamed Sabbar</li>
   <li>🎨 Nombre 2 — Frontend</li>
   <li>🧩 Nombre 3 — Backend</li>
   <li>🧑‍✈️ Nombre 4 — Scrum Master</li>
